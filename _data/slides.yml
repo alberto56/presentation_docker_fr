@@ -12,20 +12,20 @@
 #
 # See https://github.com/alberto56/presentation_docker_fr
 # See http://alberto56.github.io/presentation_docker_fr/
-# See http://agilemontreal.ca/agile-tour-2014/programme-2014/plage-b/#Albala
+# See http://www.drupalnorth.org/en/session/une-introduction-a-docker
 #
 #############
 
-- id: intro-me
-  title: Les tests automatisés <br/> huit tuyaux qui augmenteront vos chances de succès
+- id: intro-med
+  title: Intro À Docker
   desc: |
-    Albert Albala (@alberto56)
+    Albert Albaladd (@alberto56)
 
     TP1 (STM.info), CGI (Fondation 24h Tremblant), Fondation Linux, Koumbit
 
     Spécialités: Tests, Intégration continue, Deployment standardisé, Drupal
 
-    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur GitHub](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
+    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
 
 #############
 
@@ -34,14 +34,13 @@
   desc: |
     Qui êtes-vous ?
 
-     * Développeurs ?
-     * Clients ?
-     * PO ?
-     * ScrumMaster ?
+     * Votre rôle ?
+     * Votre expérience avec Docker, Vagrant, Puppet ?
+     * Ce que vous cherchez dans cette présentation ?
 
 #############
 
-- id: 1ci
+- id: a
   title: Tuyau No. 1 - Installez un serveur d'intégration continue.
   desc: |
     Un serveur d'intégration continue doit:
@@ -54,112 +53,27 @@
 
 #############
 
-- id: 1ci-exemple
-  title: Exemple d'un serveur d'intégration continue.
+- id: b
+  title: Évolution de du développement Drupal: Git.
   desc: |
-     <img src="https://pbs.twimg.com/media/BvqKFnICQAAQbPB.png:large" />
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
 
 #############
 
-- id: 2deploy-napkin
-  title: Tuyau No. 2 - Standardisez votre déploiement
+- id: c
+  title: Évolution de du développement Drupal: Features.
   desc: |
-    Ne déployez pas avec une napkin.
-
-     <img src="http://ops.fhwa.dot.gov/publications/telecomm_handbook/images/fig5-3.gif" />
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
 
 #############
 
-- id: 2deploy
-  title: Tuyau No. 2 - Standardisez votre déploiement
+- id: d
+  title: Évolution de du développement Drupal: DevOps (Vagrant, Puppet, Chef, Ansible, Docker).
   desc: |
-    Ne déployez pas avec une napkin.
-
-     * Pour un serveur: Puppet, Chef, Ansible, Vagrant
-     * Pour Drupal: Features
-     * Trouvez l'outil de gestion de configuration pour votre projet
-     * Standardisez vos environnements, n'en faites pas des oeuvres d'art.
-
-#############
-
-- id: 3effort
-  title: Tuyau No. 3 - Comprenez l'effort requis
-  desc: |
-    Doublez vos estimez en points
-
-     * Vous récurérez ces points plus tard.
-     <img src="http://dcycleproject.org/sites/dcycleproject.org/files/pyramid2.png" />
-
-#############
-
-- id: 4graduel
-  title: Tuyau No. 4 - Commencez en douceur
-  desc: |
-    Vous avez un système complexe avec aucun test.
-
-     * Ne tentez pas d'ajouter des tests pour tout d'un coup.
-     * Écrivez un seul test très simple.
-     * En réparant un bogue ou en ajoutant une fonction, testez les changements.
-
-#############
-
-- id: 5humilite
-  title: Tuyau No. 5 - Vous n'êtes pas aussi bon que vous ne le croyez
-  desc: |
-    Vous allez entendre:
-
-     * "C'est super simple, on n'a pas besoin de tester"
-     * "Ce code est très beau, on n'a pas besoin de tests"
-     * Pratiquez-vous avec ce qui est facile
-     * ...et vous pourrez tester ce qui est complexe.
-
-#############
-
-- id: 6pyramide
-  title: Tuyau No. 6 - Commencez avec ce qui est plus facile
-  desc: |
-    Commencez en-bas de la pyramide
-
-     <img src="http://dcycleproject.org/sites/dcycleproject.org/files/pyramid.png" />
-
-#############
-
-- id: 6pyramide
-  title: Tuyau No. 6 - Commencez avec ce qui est plus facile
-  desc: |
-    Commencez en-bas de la pyramide
-
-     * Des outils comme Behat et Selenium sont impressionants
-     * Commencez toutefois avec de simples tests unitaires
-     * Gardez vos tests en-deça de 30 minutes
-
-#############
-
-- id: 7devs
-  title: Tuyau No. 7 - Ne sous-estimez pas la capacité de vos développeurs de ne pas écrire de tests
-  desc: |
-    Quels outils pour amenez vos devs à faire écrire des tests?
-
-     * TDD (Développement piloté par les tests).
-     * Outils automatisés de couverture de code
-     <img src="http://wiki.civicrm.org/confluence/download/attachments/23724109/Picture+5.png?version=1&modificationDate=1256651688000" />
-
-#############
-
-- id: 8processus
-  title: Tuyau No. 8 - Ne contournez pas votre processus
-  desc: |
-    Que feriez-vous si :
-
-     * Un bogue important affecte votre outil et vous n'avez pas le temps de passer par votre processus ?
-     * "Faire une exception" vous ferait gagner 5 heures ?
-
-#############
-
-- id: 9equipe
-  title: Tuyau No. 9 (bonus) - Appropriez-vous les tests en tant qu'équipe, ne pas les imposer.
-  desc: |
-    Si vous êtes le seul à vouloir que vos tests échouent s'il y a un espace de trop dans votre code, vos collègues n'accepteront pas le processus.
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
 
 #############
 
