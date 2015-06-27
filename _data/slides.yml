@@ -186,12 +186,17 @@
   desc: |
     Avant Docker...
 
+    <img src="./images/stevedoers1.jpg" />
+    <img src="./images/stevedoers2.jpg" />
+
 #############
 
 - id: a20150626142349
   title: En conclusion...
   desc: |
     Après Docker...
+
+    <img src="./images/containers.jpg" />
 
 #############
 
@@ -201,5 +206,3 @@
     Albert Albala (@alberto56)
 
     Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
-
-
