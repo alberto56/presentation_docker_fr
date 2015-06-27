@@ -104,47 +104,37 @@
   title: Machines virtuelles vs. conteneurs
   desc: |
 
-    Fonctionnement de machines virtuelles:
-
-    <img src="./images/vms.png" />
+    <img src="./images/vms-containers.png" />
 
     Source: docker.com
 
 #############
 
-- id: a98
-  title: Machines virtuelles vs. conteneurs
-  desc: |
-
-    Conteneurs:
-
-    <img src="./images/containers.png" />
-
-    Source: docker.com
-
-#############
-
-- id: a105
+- id: a10520150626150738
   title: Idempotence vs. conteneurs non-persistents
   desc: |
 
-    Les outils idempotents décrivent l'état désiré d'un système
+    Les outils idempotents (Chef, Puppet) décrivent l'état désiré d'un système
 
-      * Chef
-      * Puppet
-      * Ansible
+        package { 'php' :
+          ensure => '5.2' ,
+        }
 
     Lors d'une mise à jour, l'outil modifie le système cible.
 
+    <img src="./images/idempotent.png" />
+
 #############
 
-- id: a105
+- id: a10520150626150713
   title: Idempotence vs. conteneurs non-persistents
   desc: |
 
-     * Docker crée le système cible une seule fois.
-     * Le système n'est pas mis à jour, il est remplacé.
-     * Les données stockées à l'extérieur du conteneur.
+    Avec Docker, le conteneur est remplacé, pas mis à jour.
+
+        RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
+
+    <img src="./images/non-persistent.png" />
 
 #############
 
@@ -152,94 +142,30 @@
   title: Utilisation agressive de la mémoire cache
   desc: |
 
+    Temps requis pour créer un environnement:
+
      * Vagrant + VM: 10-30 secondes pour monter une VM.
      * Docker après le 1er build: < 1 seconde.
+     * Systèmes de "commit" à la git
 
-#############
+    Avantages de franchir le **seuil psychologique de l'instantanéité**:
 
-- id: a138
-  title: Que permet une bonne utilisation des ressources?
-  desc: |
-
-     * Le seuil psychologique des 10 secondes
      * Repartir à neuf pour chaque test
      * Système n'est jamais pollué
      * On peut construire le conteneur quand on en a besoin (comme Pantheon)
 
 #############
 
-- id: a138
-  title: Les données dans une VM avec Puppet/Chef/Ansible
-  desc: |
-
-     * Les données peuvent résider dans la VM
-
-#############
-
-- id: a157
-  title: Les données dans un conteneur
-  desc: |
-
-     * Les données ne résident pas dans la VM.
-
-#############
-
-- id: a165
-  title: Mises à jour avec VM/Puppet/Chef/Ansible
-  desc: |
-
-     * Idempotence: requiert un outil qui modifie la VM.
-     * La VM inclue les données
-
-#############
-
-- id: a174
-  title: Mises à jour avec Docker
-  desc: |
-
-     * Aucune donnée sur le conteneur.
-     * Un vieux conteneur est remplacé par un neuf.
-     * drush updb -y
-
-#############
-
 - id: a184
-  title: Démo #1
+  title: Démos
   desc: |
 
      * Développement d'un module Drupal
-
-#############
-
-- id: a192
-  title: Démo #2
-  desc: |
-
      * Docker avec autre chose que Drupal
-
-#############
-
-- id: a200
-  title: Démo #3
-  desc: |
-
      * Développement d'un site Drupal
-
-#############
-
-- id: a20820150626141906
-  title: Démo #4
-  desc: |
-
      * Déploiement en prod
-
-#############
-
-- id: a21620150626141858
-  title: Démo #5
-  desc: |
-
      * Mise à jour
+     * Intégration continue avec CircleCI
 
 #############
 
